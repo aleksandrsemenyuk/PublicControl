@@ -1,0 +1,10 @@
+﻿#hide {
+    width: 20px;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.mainInfo {
+    text-align: center;
+}

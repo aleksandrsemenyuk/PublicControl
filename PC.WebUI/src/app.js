@@ -1,12 +1,22 @@
-export class App {
+export class App {    
+
   configureRouter(config, router) {
-    config.title = 'Aurelia';
+    config.title = 'Public Control';
     config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router' }
+      { route: ['', 'login'],    name: 'login',      moduleId: 'login',      nav: true, title: 'Login' },
+      { route: 'about',         name: 'about',     moduleId: 'about',     nav: true, title: 'About' }
     ]);
 
     this.router = router;
   }
+
+  attached() {
+              var mapProp = {
+                  center:new google.maps.LatLng(50.6143691,26.2632106),
+                  zoom:13
+          };
+          var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+          google.maps.event.addDomListener(window, 'load', initialize);
+}
+
 }
