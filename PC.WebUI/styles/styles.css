@@ -25,6 +25,10 @@ footer div {
     line-height: 5vh;
 }
 
+#help, #logIn, #about {
+    color:white;
+}
+
 #help, #logIn {
     font-size:18px;
 }
@@ -62,10 +66,6 @@ footer div {
     width: 35vw;
     height: 85vh;
     background-color:white;
-}
-
-a {
-    color:white;
 }
 
 body {
