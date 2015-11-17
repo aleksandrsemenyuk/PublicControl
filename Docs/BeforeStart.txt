@@ -1,0 +1,5 @@
+1. Run Cmd as Administrator
+2. Select Directory with project as Current 
+3. Write commands:
+	jspm install
+	jspm install aurelia-http-client
