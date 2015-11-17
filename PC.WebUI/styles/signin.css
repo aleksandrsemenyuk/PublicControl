@@ -1,0 +1,16 @@
+﻿#tLogin,
+#tPass,
+#btnLogin {
+    width:100%;
+    height:30px;
+    margin-top:7px;
+}
+
+a span:hover {
+    color: red;
+}
+
+a span {
+    color: #4FA1BB;
+    text-decoration: underline;
+}

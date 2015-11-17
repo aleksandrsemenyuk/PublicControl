@@ -1,10 +1,24 @@
-<template>
-  <require from="nav-bar.html"></require>
-  <require from="bootstrap/css/bootstrap.css"></require>
-
-  <nav-bar router.bind="router"></nav-bar>
-
-  <div class="page-host">
-    <router-view></router-view>
-  </div>
+<template>  
+    <require from="bootstrap/css/bootstrap.css"></require> 
+    <link href="/styles/styles.css" rel="stylesheet" />    
+    <header>
+        <img id="logo" src="/Images/logo.png"/>
+        
+        <a href="" id="help"  title="Inform about dangerous">Inform!</a>        
+        <a href="/#" id="logIn" title="Customer Account">Login</a>
+        <a href="/#/about" id="about" title="Read about our project" >About Us</a>        
+    </header>
+    <img id="hide" src="/Images/hide.png" title="show/hide sidebar" click.trigger="showhide()"/>
+    <div id="googleMap" style="background-color:blue">       
+    </div>
+    <div id="sidebar"> 
+         <div class="page-host">
+             <link href="/styles/sidebar.css" rel="stylesheet" />
+            <router-view></router-view>
+         </div>
+    </div>    
+    <footer>
+        <div>&copy; 2015 StepAcademy</div>
+    </footer>
+ 
 </template>

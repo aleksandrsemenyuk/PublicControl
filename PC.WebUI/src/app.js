@@ -1,12 +1,19 @@
-export class App {
+export class App {    
+
   configureRouter(config, router) {
-    config.title = 'Aurelia';
+    config.title = 'Public Control';
     config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router' }
+      { route: ['', 'login'],    name: 'login',      moduleId: 'routes/login/login',                  nav: true, title: 'Login' },
+      { route: 'signUp',         name: 'signUp',     moduleId: 'routes/login/sign_up/signUp',         nav: true, title: 'Sign Up' },
+      { route:'viasocial',       name: 'viasocial',  moduleId: 'routes/login/via_social/viasocial',   nav: true, title: 'Social' },
+      { route: 'about',          name: 'about',      moduleId: 'routes/about/about',                  nav: true, title: 'About' }
     ]);
 
     this.router = router;
+  } 
+
+  showhide()
+  {
+      $("#sidebar").toggle("slow");
   }
 }
