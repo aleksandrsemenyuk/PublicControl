@@ -160,11 +160,16 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\SignUpModel.cs" />
+    <Compile Include="Models\SocialModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +257,44 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="src\app.html" />
+    <Content Include="src\app.js" />
+    <Content Include="src\components\map\map.html" />
+    <Content Include="src\components\map\map.js" />
+    <Content Include="src\components\signIn\signIn.html" />
+    <Content Include="src\components\signIn\signIn.js" />
+    <Content Include="src\components\signUp\signup.html" />
+    <Content Include="src\components\signUp\signup.js" />
+    <Content Include="src\components\social\viasocial.html" />
+    <Content Include="src\components\social\viasocial.js" />
+    <Content Include="src\example\app.html" />
+    <Content Include="src\example\app.js" />
+    <Content Include="src\example\blur-image.js" />
+    <Content Include="src\example\child-router.html" />
+    <Content Include="src\example\child-router.js" />
+    <Content Include="src\example\main.js" />
+    <Content Include="src\example\nav-bar.html" />
+    <Content Include="src\example\users.html" />
+    <Content Include="src\example\users.js" />
+    <Content Include="src\example\welcome.html" />
+    <Content Include="src\example\welcome.js" />
+    <Content Include="src\main.js" />
+    <Content Include="src\models\models.txt.txt" />
+    <Content Include="src\routes\about\about.html" />
+    <Content Include="src\routes\about\about.js" />
+    <Content Include="src\routes\login\login.html" />
+    <Content Include="src\routes\login\login.js" />
+    <Content Include="src\routes\login\sign_up\signUp.html" />
+    <Content Include="src\routes\login\sign_up\signUp.js" />
+    <Content Include="src\routes\login\via_social\viasocial.html" />
+    <Content Include="src\routes\login\via_social\viasocial.js" />
+    <Content Include="src\services\services.txt.txt" />
+    <Content Include="src\utils\utils.txt.txt" />
+    <Content Include="styles\buttons.css" />
+    <Content Include="styles\input_button_style.css" />
+    <Content Include="styles\sidebar.css" />
+    <Content Include="styles\signin.css" />
+    <Content Include="styles\styles.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -284,7 +327,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

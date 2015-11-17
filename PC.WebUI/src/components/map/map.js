@@ -50,8 +50,13 @@ export class Map {
      * @returns {} 
      */
     drawMap(options) {
+
         let center = this.getGoogleMapsGeoCoords(options.geo);
         window.infoWindow = new google.maps.InfoWindow();
+
+        let self = this;
+        let center = new google.maps.LatLng(50.6143691, 26.2632106);
+
         window.map = new google.maps.Map(document.getElementById(options.mapElementSelector), {
             center: center,
             zoom: 13,
@@ -65,6 +70,7 @@ export class Map {
         
         this.marker = new google.maps.Marker({
             map: window.map,
+
             position: center,
             title: 'Description'
         });
@@ -81,6 +87,13 @@ export class Map {
 
         google.maps.event.addListener(this.marker, 'click', function() {
             that.marker.info.open(window.map, that.marker);
+
+            position: center
+        });
+
+        window.map.addListener('click', function(e) {
+            self.moveMarker(e.latLng);
+
         });
     }
     /**
@@ -95,8 +108,8 @@ export class Map {
         this.marker.setPosition(latLng);
     }
 
+
     getGoogleMapsGeoCoords(geo) {
         return new google.maps.LatLng(50.6143691, 26.2632106);
     }
-
 }

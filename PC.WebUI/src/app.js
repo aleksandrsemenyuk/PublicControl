@@ -1,3 +1,4 @@
+
 export class App {    
 
   configureRouter(config, router) {
@@ -11,6 +12,7 @@ export class App {
 
     this.router = router;
   } 
+  }
 
   showhide()
   {

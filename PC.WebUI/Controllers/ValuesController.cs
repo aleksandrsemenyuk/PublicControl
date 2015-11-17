@@ -9,6 +9,19 @@ namespace PC.WebUI.Controllers
 {
     public class ValuesController : ApiController
     {
+
+        [HttpGet]
+        public string GetTockenFacebook(string tocken)
+        {
+            return "{id:1}";
+        }
+
+        [HttpGet]
+        public string GetTockenGoogle(string tocken)
+        {
+            return "{id:1}";
+        }
+
         // GET api/values
         public IEnumerable<string> Get()
         {
