@@ -1,3 +1,3 @@
-export class CustomerLogin{
+export class CustomerLogin {
+    
 }
-
