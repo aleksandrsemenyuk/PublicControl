@@ -1,8 +1,9 @@
 ﻿#hide {
-    width: 20px;
-    float: left;
-    margin-left: 10px;
+    width: 40px;
+    float: right;
     cursor: pointer;
+    position: relative;
+    z-index:2;
 }
 
 .mainInfo {
@@ -10,4 +11,8 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.back {
+    margin-left:10px;
 }

@@ -1,6 +1,6 @@
 <template>  
     <require from="bootstrap/css/bootstrap.css"></require> 
-    <link href="/styles/styles.css" rel="stylesheet" />
+    <link href="/styles/styles.css" rel="stylesheet" />    
     <header>
         <img id="logo" src="/Images/logo.png"/>
         
@@ -8,13 +8,15 @@
         <a href="/#" id="logIn" title="Customer Account">Login</a>
         <a href="/#/about" id="about" title="Read about our project" >About Us</a>        
     </header>
-    <div id="googleMap">       
+    <img id="hide" src="/Images/hide.png" title="show/hide sidebar" click.trigger="showhide()"/>
+    <div id="googleMap" style="background-color:blue">       
     </div>
-    <div id="container">
+    <div id="sidebar"> 
          <div class="page-host">
+             <link href="/styles/sidebar.css" rel="stylesheet" />
             <router-view></router-view>
          </div>
-    </div>
+    </div>    
     <footer>
         <div>&copy; 2015 StepAcademy</div>
     </footer>

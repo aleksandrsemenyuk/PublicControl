@@ -1,13 +1,11 @@
-<template>
-    <link href="/styles/sidebar.css" rel="stylesheet" />
-
-    <img id="hide" src="/Images/hide.png"/>
-    <br />
+<template>        
       <div class="mainInfo">
           <require from="../../components/signIn/signIn"></require>          
+          <br />
           <signin title="Login"></signin>
+
           <span>if you don't have account you may </span>
-          <a href=""><span id="btnSignUp" title="SignUp">SignUp</span></a>
-          <span>or </span><a href=""><span id="btnSocial" title="SignIn via Social">SignIn via Social</span></a>          
-</div>
+          <a href="/#/signUp"><span id="btnSignUp" title="SignUp">SignUp</span></a>
+          <span>or </span><a href="/#/viasocial"><span id="btnSocial" title="SignIn via Social">SignIn via Social</span></a>             
+      </div>
 </template>
