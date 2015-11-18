@@ -12,7 +12,6 @@ export class App {
 
     this.router = router;
   } 
-  }
 
   showhide()
   {

@@ -1,6 +1,6 @@
 ﻿
 import 'bootstrap';
-import {HttpClient} from 'aurelia-http-client';
+//import {HttpClient} from 'aurelia-http-client';
 import {customElement, bindable} from 'aurelia-framework';
 
 @customElement('viasocial')
@@ -21,10 +21,10 @@ export class SocialLogIn {
             }, function(e) {
                 alert('Whoops! ' + e.error.message);
             });
-            var http = new HttpClient().configure(x => {
-                x.withBaseUrl('http://localhost:9438/');
-        });
-        http.get("/api/Data/GetTockenFacebook?tocken="+tock);
+            //var http = new HttpClient().configure(x => {
+            //    x.withBaseUrl('http://localhost:9438/');
+        //});
+       // http.get("/api/Data/GetTockenFacebook?tocken="+tock);
     }, function(e) {
         console.log('Signin error: ' + e.error.message);
     });
@@ -56,10 +56,10 @@ loginGoogle(){
         }, function(e) {
             alert('Whoops! ' + e.error.message);
         });
-        var http = new HttpClient().configure(x => {
-            x.withBaseUrl('');
-    });
-    http.get("/api/Data/GetTockenGoogle?tocken="+tock);
+        //var http = new HttpClient().configure(x => {
+        //    x.withBaseUrl('');
+    //});
+   // http.get("/api/Data/GetTockenGoogle?tocken="+tock);
     /*http.get("/api/Data/GetTockenGoogle");*/
 }, function(e) {
     console.log('Signin error: ' + e.error.message);

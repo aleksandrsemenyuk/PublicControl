@@ -1,5 +1,7 @@
 <template>  
     <require from="bootstrap/css/bootstrap.css"></require> 
+    <require from="components/map/map"></require>
+
     <link href="/styles/styles.css" rel="stylesheet" />    
     <header>
         <img id="logo" src="/Images/logo.png"/>
@@ -7,9 +9,10 @@
         <a href="" id="help"  title="Inform about dangerous">Inform!</a>        
         <a href="/#" id="logIn" title="Customer Account">Login</a>
         <a href="/#/about" id="about" title="Read about our project" >About Us</a>        
-    </header>
-    <img id="hide" src="/Images/hide.png" title="show/hide sidebar" click.trigger="showhide()"/>
-    <div id="googleMap" style="background-color:blue">       
+    </header> 
+    <img id="hide" src="/Images/hide.png" title="show/hide sidebar" click.trigger="showhide()" /> 
+    <div id="googleMap"> 
+        <map></map>      
     </div>
     <div id="sidebar"> 
          <div class="page-host">

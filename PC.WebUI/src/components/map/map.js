@@ -9,9 +9,9 @@ export class Map {
         this.marker = {};
         // todo: replace this data with database data
         this.pointers = [
-            (50.6043691, 26.2232106),
-            (50.5543691, 26.2332106),
-            (50.6043691, 26.2132106),
+            new google.maps.LatLng(50.6043691, 26.2232106),
+            new google.maps.LatLng(50.5543691, 26.2332106),
+            new google.maps.LatLng(50.6043691, 26.2132106),
         ];
     }
 
@@ -38,10 +38,9 @@ export class Map {
         for (var i = 0; i < pointers.length; i++) {
             var marker = new google.maps.Marker({
                 map: map,
-                position: new google.maps.LatLng(pointers[i]),
+                position: pointers[i],
                 title: 'Description'
             });
-            marker.setMap(map);
         }
     }
     /**
@@ -50,8 +49,7 @@ export class Map {
      * @returns {} 
      */
     drawMap(options) {
-
-        let center = this.getGoogleMapsGeoCoords(options.geo);
+                
         window.infoWindow = new google.maps.InfoWindow();
 
         let self = this;
@@ -66,7 +64,7 @@ export class Map {
             maxZoom: options.maxZoom
         });
 
-        this.initPoints(window.map, this.pointers);
+        this.initPoints(window.map, self.pointers);
         
         this.marker = new google.maps.Marker({
             map: window.map,

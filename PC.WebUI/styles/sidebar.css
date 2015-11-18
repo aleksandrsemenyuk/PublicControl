@@ -1,8 +1,8 @@
 ﻿#hide {
     width: 40px;
-    float: right;
+    right: 0;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     z-index:2;
 }
 
