@@ -1,0 +1,5 @@
+C:\Users\sergiy\Documents\PublicControl\Database\bin\Debug\Database.dll
+C:\Users\sergiy\Documents\PublicControl\Database\bin\Debug\Database.pdb
+C:\Users\sergiy\Documents\PublicControl\Database\obj\Debug\Database.csprojResolveAssemblyReference.cache
+C:\Users\sergiy\Documents\PublicControl\Database\obj\Debug\Database.dll
+C:\Users\sergiy\Documents\PublicControl\Database\obj\Debug\Database.pdb
