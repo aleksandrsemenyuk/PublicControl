@@ -3,3 +3,6 @@
 3. Write commands:
 	jspm install
 	jspm install aurelia-http-client
+	npm install -g bower
+	bower install hello
+	jspm install aurelia-validation
