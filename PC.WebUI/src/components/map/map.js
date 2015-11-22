@@ -6,6 +6,7 @@ import {EventAggregator} from 'aurelia-event-aggregator';
 export class Map {
 
     constructor(eventAggregator) {
+        this.eventAggregator = eventAggregator;
         this.marker = {};
         // todo: replace this data with database data
         this.pointers = [
@@ -13,6 +14,10 @@ export class Map {
             new google.maps.LatLng(50.5543691, 26.2332106),
             new google.maps.LatLng(50.6043691, 26.2132106),
         ];
+    }
+
+    publish() {
+        this.eventAggregator.publish("inform", this.moveMarker);
     }
 
     attached() {
@@ -49,9 +54,6 @@ export class Map {
      * @returns {} 
      */
     drawMap(options) {
-                
-        window.infoWindow = new google.maps.InfoWindow();
-
         let self = this;
         let center = new google.maps.LatLng(50.6143691, 26.2632106);
 
@@ -68,7 +70,6 @@ export class Map {
         
         this.marker = new google.maps.Marker({
             map: window.map,
-
             position: center,
             title: 'Description'
         });
@@ -77,21 +78,6 @@ export class Map {
         let that = this;
         window.map.addListener('click', function(e) {
             that.moveMarker(e.latLng);
-        });
-
-        this.marker.info = new google.maps.InfoWindow({
-            content: '<b>Speed:</b> ' + 12 + ' knots'
-        });
-
-        google.maps.event.addListener(this.marker, 'click', function() {
-            that.marker.info.open(window.map, that.marker);
-
-            position: center
-        });
-
-        window.map.addListener('click', function(e) {
-            self.moveMarker(e.latLng);
-
         });
     }
     /**
@@ -104,10 +90,7 @@ export class Map {
         var lng = latLng.lng();
 
         this.marker.setPosition(latLng);
-    }
 
-
-    getGoogleMapsGeoCoords(geo) {
-        return new google.maps.LatLng(50.6143691, 26.2632106);
+        this.eventAggregator.publish("inform", latLng);
     }
 }

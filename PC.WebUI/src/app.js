@@ -7,7 +7,8 @@ export class App {
       { route: ['', 'login'],    name: 'login',      moduleId: 'routes/login/login',                  nav: true, title: 'Login' },
       { route: 'signUp',         name: 'signUp',     moduleId: 'routes/login/sign_up/signUp',         nav: true, title: 'Sign Up' },
       { route:'viasocial',       name: 'viasocial',  moduleId: 'routes/login/via_social/viasocial',   nav: true, title: 'Social' },
-      { route: 'about',          name: 'about',      moduleId: 'routes/about/about',                  nav: true, title: 'About' }
+      { route: 'about',          name: 'about',      moduleId: 'routes/about/about',                  nav: true, title: 'About' },
+      { route: 'inform',         name: 'about',      moduleId: 'routes/inform/inform',                nav: true, title: 'Inform' }
     ]);
 
     this.router = router;
