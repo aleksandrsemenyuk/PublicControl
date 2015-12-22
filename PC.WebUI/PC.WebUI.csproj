@@ -163,10 +163,12 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IssueController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IssueViewModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\SignUpModel.cs" />
     <Compile Include="Models\SocialModel.cs" />
@@ -259,6 +261,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="src\app.html" />
     <Content Include="src\app.js" />
+    <Content Include="src\components\issue-form\issue-form.html" />
+    <Content Include="src\components\issue-form\issue-form.js" />
     <Content Include="src\components\map\map.html" />
     <Content Include="src\components\map\map.js" />
     <Content Include="src\components\signIn\signIn.html" />
@@ -282,6 +286,8 @@
     <Content Include="src\models\models.txt.txt" />
     <Content Include="src\routes\about\about.html" />
     <Content Include="src\routes\about\about.js" />
+    <Content Include="src\routes\inform\inform.html" />
+    <Content Include="src\routes\inform\inform.js" />
     <Content Include="src\routes\login\login.html" />
     <Content Include="src\routes\login\login.js" />
     <Content Include="src\routes\login\sign_up\signUp.html" />
@@ -330,6 +336,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{7ee598a5-a821-4dea-b3da-ea030625d26e}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{1043323a-dfc3-4415-acd3-c7f58fbfda26}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
