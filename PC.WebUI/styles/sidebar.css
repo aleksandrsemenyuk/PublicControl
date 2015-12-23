@@ -8,7 +8,7 @@
 
 .mainInfo {
     width:80%;
-    text-align: center;
+    
     margin-left: auto;
     margin-right: auto;
 }
@@ -16,3 +16,18 @@
 .back {
     margin-left:10px;
 }
+
+h4.title {
+    text-align:center;
+}
+
+.send {
+    text-align:center;
+}
+
+    .send button {
+        width:50%;
+        color:white;
+        background:#4EC54E;
+    }
+
